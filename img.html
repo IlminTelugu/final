@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dark Night Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-right {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 28px;
+      color: #fff;
+      background: none;
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      box-shadow: none;
+      transition: opacity 0.3s ease;
+      opacity: 1;
+      z-index: 1000;
+    }
+
+    .top-right.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 80px 20px 20px;
+      gap: 20px;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .download-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      border: none;
+      border-radius: 50%;
+      padding: 8px 10px;
+      cursor: pointer;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background 0.3s;
+      z-index: 10;
+    }
+
+    .download-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    @media (min-width: 600px) {
+      .gallery img {
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back button -->
+  <a href="../mainfile/home.html" class="top-right"> →</a>
+
+  <div class="gallery">
+    <div class="image-wrapper">
+      <img src="img1.jpeg" alt="Image 1" />
+      <a href="img1.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img2.jpeg" alt="Image 2" />
+      <a href="img2.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img3.jpeg" alt="Image 3" />
+      <a href="img3.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img4.jpeg" alt="Image 4" />
+      <a href="img4.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img5.jpeg" alt="Image 5" />
+      <a href="img5.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img6.jpeg" alt="Image 6" />
+      <a href="img6.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img7.jpeg" alt="Image 7" />
+      <a href="img7.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img8.jpeg" alt="Image 8" />
+      <a href="img8.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img9.jpeg" alt="Image 9" />
+      <a href="img9.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img10.jpeg" alt="Image 10" />
+      <a href="img10.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img11.jpeg" alt="Image 11" />
+      <a href="img11.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img12.jpeg" alt="Image 12" />
+      <a href="img12.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+    <div class="image-wrapper">
+      <img src="img13.jpeg" alt="Image 13" />
+      <a href="img13.jpeg" download class="download-btn" title="Download">⬇</a>
+    </div>
+  </div>
+
+  <script>
+    const topButton = document.querySelector('.top-right');
+    window.addEventListener('scroll', () => {
+      topButton.classList.toggle('hidden', window.scrollY !== 0);
+    });
+  </script>
+
+</body>
+</html>
